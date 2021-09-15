@@ -49,7 +49,7 @@ export class DocumentRoute {
      * @swagger
      * /api/documents/{uid}:
      *   get:
-     *     tags: 
+     *     tags:
      *      - Documents
      *     summary: Returns a document for a given uid
      *     security:
@@ -63,7 +63,7 @@ export class DocumentRoute {
      *        examples:
      *          document:
      *            summary: A document example
-     *            value: "123" 
+     *            value: "123"
      *     produces:
      *      - application/json
      *     responses:

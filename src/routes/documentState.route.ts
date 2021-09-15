@@ -29,7 +29,7 @@ export class DocumentStateRoute {
      * @swagger
      * /api/dis/{uid}:
      *   post:
-     *     tags: 
+     *     tags:
      *      - DocumentState
      *     summary: Updates a single documentState for a given uid
      *     description: Updates a single documentState for a given uid
@@ -44,14 +44,14 @@ export class DocumentStateRoute {
      *        examples:
      *          docState1:
      *            summary: A docState1 example
-     *            value: "123" 
-     *      - name: body 
+     *            value: "123"
+     *      - name: body
      *        in: body
      *        description: Fields for the DocumentState resource
      *        required: true
      *        schema:
      *          $ref: '#/definitions/DocumentState'
-     *        examples: 
+     *        examples:
      *          docState1:
      *            summary: A docState1 example
      *            value: {"disUid": "1234", "regDate": "2020-06-30", "refNum": "5678"}

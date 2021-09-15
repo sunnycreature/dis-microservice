@@ -3,6 +3,7 @@ import { DocumentRoute } from './document.route';
 import environnement from '../config/environnement';
 import { DocumentStateRoute } from './documentState.route';
 import { EntityRoute } from './entity.route';
+import { ContactRoute } from './contact.route';
 
 /**
  * Root api router specifications
@@ -13,12 +14,14 @@ export class IndexRoute {
   private api: Router = Router();
   private documentRoute: DocumentRoute;
   private documentStateRoute: DocumentStateRoute;
-  private entityRoute: EntityRoute;  
+  private entityRoute: EntityRoute;
+  private contactRoute: ContactRoute;
 
   constructor() {
     this.documentRoute = new DocumentRoute();
     this.documentStateRoute = new DocumentStateRoute();
     this.entityRoute = new EntityRoute();
+    this.contactRoute = new ContactRoute();
     this.routes();
   }
 
@@ -47,5 +50,6 @@ export class IndexRoute {
     this.api.use('/documents', this.documentRoute.getApi());
     this.api.use('/dis', this.documentStateRoute.getApi());
     this.api.use('/entity', this.entityRoute.getApi());
+    this.api.use('/contacts', this.contactRoute.getApi());
   }
 }

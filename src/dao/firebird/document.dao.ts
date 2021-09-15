@@ -13,7 +13,7 @@ export class DocumentDao {
    * @return a promise with all entities (containing id and document_name)
    */
   public async findAll(): Promise<Document[]> {
-    log.info(`DAO : findAll() - entities`);
+    log.info(`DAO : findAll() - documents`);
     const value = await documentModel.findAll();
     if (!value.length) {
       throw new DataNotFoundException('- no document');
@@ -46,7 +46,7 @@ export class DocumentDao {
    */
   /* public async updateOneByUid(uid: string, regDate?: string, regNum?: string): Promise<number> {
     log.info(`DAO : updateOneByUid() - ${uid}`);
-    
+
     const newRegDate: Date | undefined = regDate ? new Date(regDate) : undefined;
     log.info('newRegDate' + regDate);
     const value = await documentModel.updateOne({ uid, regDate: newRegDate, regNum });
